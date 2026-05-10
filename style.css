@@ -208,6 +208,7 @@ nav {
 .about-block { margin-bottom:36px; }
 .about-block h4 { font-family:'Fustat',sans-serif; font-weight:600; font-size:16px; margin-bottom:12px; color:#fff; }
 .about-block .bio { margin-bottom:16px; }
+.about-block .bio strong { color:#fff; font-weight:600; }
 .skills {
   display:flex; flex-wrap:wrap; gap:10px; margin-bottom:40px;
 }
