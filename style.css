@@ -201,7 +201,13 @@ nav {
 .about-info .role {
   color:#5ae14c; font-size:16px; margin-bottom:24px;
 }
-.about-info .bio { color:#a0a0a0; margin-bottom:32px; max-width:500px; }
+.about-info .bio { color:#a0a0a0; margin-bottom:28px; max-width:540px; line-height:1.7; }
+.about-contact-info { display:flex; gap:20px; flex-wrap:wrap; margin-bottom:28px; }
+.about-contact-info span { color:#888; font-size:14px; }
+.about-contact-info a { color:#5ae14c; font-size:14px; }
+.about-block { margin-bottom:36px; }
+.about-block h4 { font-family:'Fustat',sans-serif; font-weight:600; font-size:16px; margin-bottom:12px; color:#fff; }
+.about-block .bio { margin-bottom:16px; }
 .skills {
   display:flex; flex-wrap:wrap; gap:10px; margin-bottom:40px;
 }
@@ -213,15 +219,21 @@ nav {
 .skill-tag:hover { border-color:#5ae14c; color:#5ae14c; }
 .timeline { margin-bottom:40px; }
 .timeline-item {
-  padding:16px 0; border-bottom:1px solid rgba(255,255,255,0.06);
+  padding:20px 0; border-bottom:1px solid rgba(255,255,255,0.06);
   display:flex; gap:20px;
 }
 .timeline-year {
   font-family:'Schibsted Grotesk',sans-serif; font-weight:600;
-  font-size:14px; color:#5ae14c; min-width:80px;
+  font-size:14px; color:#5ae14c; min-width:100px; white-space:nowrap;
 }
-.timeline-text h4 { font-weight:600; margin-bottom:4px; }
-.timeline-text p { color:#a0a0a0; font-size:14px; }
+.timeline-text h4 { font-weight:600; margin-bottom:6px; }
+.timeline-text p { color:#a0a0a0; font-size:14px; line-height:1.6; margin-bottom:8px; }
+.timeline-text p:last-child { margin-bottom:0; }
+.timeline-text .company { color:#fff; font-size:14px; margin-bottom:8px; font-weight:500; }
+.education-item { padding:14px 0; display:flex; gap:20px; }
+.education-item .edu-year { font-family:'Schibsted Grotesk',sans-serif; font-weight:600; font-size:14px; color:#5ae14c; min-width:100px; white-space:nowrap; }
+.education-item .edu-text h4 { font-weight:600; margin-bottom:4px; }
+.education-item .edu-text p { color:#a0a0a0; font-size:14px; }
 .contact-row { display:flex; gap:30px; flex-wrap:wrap; }
 .contact-item { display:flex; align-items:center; gap:10px; color:#a0a0a0; }
 .contact-item .icon { font-size:18px; }
