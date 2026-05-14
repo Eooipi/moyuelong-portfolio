@@ -77,7 +77,7 @@ nav {
 }
 .hero-bg-img {
   position:absolute; inset:0; z-index:0;
-  background:url('1.跨境升降桌/升降桌- 2.jpg') center/cover no-repeat;
+  background:url('网站背景.jpg') center/cover no-repeat;
   background-position:center center;
   filter:brightness(0.45) contrast(1.1);
 }
