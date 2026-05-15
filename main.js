@@ -211,8 +211,9 @@ document.addEventListener('click', e => {
     lightboxImg.src = e.target.src;
     lightbox.classList.add('active');
     e.stopPropagation();
+    e.preventDefault();
   }
-});
+}, true);
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') {
