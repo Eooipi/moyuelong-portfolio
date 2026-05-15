@@ -357,5 +357,9 @@
 <script src="main.js" defer></script>
 
 <button id="globalBackToTop" class="global-back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部">↑</button>
+<div id="lightbox" class="lightbox" onclick="this.classList.remove('active')">
+  <span class="lightbox-close">✕</span>
+  <img id="lightbox-img" src="" alt="放大预览">
+</div>
 </body>
 </html>

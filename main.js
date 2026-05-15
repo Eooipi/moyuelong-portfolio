@@ -202,6 +202,23 @@ function openProject(id) {
   document.body.style.overflow = 'hidden';
 }
 
+// ==================== Lightbox ====================
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+document.addEventListener('click', e => {
+  if (e.target.tagName === 'IMG' &&
+     (e.target.closest('.modal-section') || e.target.closest('.product-card-thumb'))) {
+    lightboxImg.src = e.target.src;
+    lightbox.classList.add('active');
+    e.stopPropagation();
+  }
+});
+
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { modalOverlay.classList.remove('active'); document.body.style.overflow = ''; }
+  if (e.key === 'Escape') {
+    lightbox.classList.remove('active');
+    modalOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
 });
