@@ -418,7 +418,7 @@ nav {
   position:absolute; top:30px; right:30px; color:#fff;
   font-size:30px; cursor:pointer; z-index:11001;
 }
-.modal-section img, .product-card-thumb img { cursor:zoom-in; }
+.modal-section img { cursor:zoom-in; }
 
 /* ===== GLOBAL BACK-TO-TOP ===== */
 .global-back-to-top {

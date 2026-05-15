@@ -207,8 +207,7 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 
 document.addEventListener('click', e => {
-  if (e.target.tagName === 'IMG' &&
-     (e.target.closest('.modal-section') || e.target.closest('.product-card-thumb'))) {
+  if (e.target.tagName === 'IMG' && e.target.closest('.modal-section')) {
     lightboxImg.src = e.target.src;
     lightbox.classList.add('active');
     e.stopPropagation();
