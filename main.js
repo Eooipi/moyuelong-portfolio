@@ -164,7 +164,7 @@ function openProject(id) {
   if (!d) return;
 
   const tagsHtml = d.tags.map(t => `<span>${t}</span>`).join('');
-  const img = (src, alt) => `<img src="${d.folder}/${src}" loading="lazy" alt="${alt||d.title}">`;
+  const img = (src, alt) => `<img src="${d.folder}/${src}" loading="lazy" decoding="async" alt="${alt||d.title}">`;
 
   const isCollection = d.tags.includes('精选合集') || d.mainImages.length > 15;
   const gridClass = isCollection ? 'modal-grid-4' : 'modal-grid-3';

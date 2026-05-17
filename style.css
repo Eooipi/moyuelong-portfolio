@@ -1,6 +1,6 @@
 /* ======================== RESET & BASE ======================== */
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
+html { scroll-behavior:smooth; scroll-padding-top:80px; }
 body {
   font-family: 'Inter','Noto Sans',sans-serif;
   background:#0a0a0a;
@@ -181,7 +181,10 @@ nav {
 .divider { width:60px; height:3px; background:#5ae14c; margin-bottom:40px; }
 .filter-tabs {
   display:flex; gap:10px; flex-wrap:wrap; margin-bottom:40px;
+  overflow-x:auto; padding-bottom:8px;
+  -webkit-overflow-scrolling:touch;
 }
+.filter-tabs::-webkit-scrollbar { display:none; }
 .filter-tab {
   padding:8px 20px; border-radius:999px; font-size:14px; font-weight:500;
   font-family:'Schibsted Grotesk',sans-serif;
