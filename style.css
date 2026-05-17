@@ -151,11 +151,11 @@ nav {
 }
 .hero-stats {
   display:flex; gap:32px; justify-content:center; margin-top:40px;
-  font-family:'Schibsted Grotesk',sans-serif;
+  font-family:'Schibsted Grotesk',sans-serif; opacity:0.5;
 }
 .hero-stats .stat { text-align:center; }
-.hero-stats .stat-num { font-size:28px; font-weight:700; color:#5ae14c; }
-.hero-stats .stat-label { font-size:13px; color:#888; margin-top:4px; }
+.hero-stats .stat-num { font-size:24px; font-weight:600; color:#5ae14c; }
+.hero-stats .stat-label { font-size:12px; color:#888; margin-top:4px; }
 .hero-scroll {
   position:absolute; bottom:40px; left:50%; transform:translateX(-50%); z-index:2;
   animation:bounce 2s infinite; cursor:pointer;
@@ -256,7 +256,7 @@ nav {
 .product-card {
   background:#141414; border-radius:16px; overflow:hidden;
   box-shadow:inset 0 0 0 1px rgba(255,255,255,0.04);
-  cursor:pointer; transition:all 0.35s;
+  cursor:pointer; transition:all 0.5s cubic-bezier(0.16,1,0.3,1);
   position:relative;
   -webkit-backface-visibility:hidden;
   transform:translateZ(0);
@@ -270,7 +270,7 @@ nav {
   position:relative;
 }
 .product-card-thumb img {
-  width:100%; height:100%; object-fit:cover; transition:transform 0.5s;
+  width:100%; height:100%; object-fit:cover; transition:transform 0.5s cubic-bezier(0.16,1,0.3,1);
   border-radius:16px 16px 0 0;
   -webkit-backface-visibility:hidden;
   transform:translateZ(0);
@@ -298,14 +298,18 @@ nav {
 
 /* ======================== MODAL (PDF-style product page) ======================== */
 .modal-overlay {
-  position:fixed; inset:0; z-index:9999; background:#0a0a0a;
+  position:fixed; inset:0; z-index:9999;
+  background:rgba(10,10,10,0.7); backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);
   overflow-y:auto; overflow-x:hidden;
   opacity:0; pointer-events:none; transition:opacity 0.3s;
 }
 .modal-overlay.active { opacity:1; pointer-events:all; }
 .modal-page {
-  max-width:1200px; margin:0 auto; padding:80px 60px;
+  max-width:1200px; margin:40px auto; padding:80px 60px;
   min-height:100vh;
+  background:#0a0a0a; border-radius:24px;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.05),0 24px 48px rgba(0,0,0,0.4);
 }
 .modal-close {
   position:fixed; top:24px; right:24px; z-index:10000;
@@ -461,6 +465,16 @@ nav {
   transition:opacity 0.7s ease, transform 0.7s ease;
 }
 .reveal.visible { opacity:1; transform:translateY(0); }
+
+/* ===== IMAGE SKELETON ===== */
+.product-card-thumb, .modal-section img, .modal-detail-full img, .modal-grid-3 img, .modal-grid-4 img, .modal-aplus-grid img {
+  background:linear-gradient(110deg, #1a1a1a 30%, #222 50%, #1a1a1a 70%);
+  background-size:200% 100%;
+}
+@keyframes imgSkeleton {
+  0% { background-position:200% 0; }
+  100% { background-position:-200% 0; }
+}
 
 /* ======================== RESPONSIVE ======================== */
 @media (max-width:1024px) {
